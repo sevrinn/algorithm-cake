@@ -34,6 +34,15 @@ console.log(movieTitles)
 
 //challenge 2
 //create a new array that contains only those movies that are PG-13
+const isPg13 = movies.filter((movie) => movie.rating === 'PG-13')
+console.log(isPg13)
 
 //challege 3
 //determine how many of the movies are rating R
+const howManyRatedR = movies.reduce((acc, movie) => {
+	if (movie.rating === 'R') {
+		acc++
+	}
+	return acc
+}, 0)
+console.log('Rated R movies: ', howManyRatedR)
